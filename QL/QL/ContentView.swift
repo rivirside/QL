@@ -10,6 +10,8 @@ import SwiftUI
 struct ContentView: View {
     @State var playFirst: Bool = false
     @State var startGame: Bool = false
+    @State var watchMode: Bool = false
+    
     var body: some View {
         
         VStack {
@@ -18,12 +20,20 @@ struct ContentView: View {
                 .foregroundColor(.accentColor)
             Toggle("Play first?", isOn: $playFirst)
             Button {
-                
+                startGame = true
             } label: {
                 Text("Start Game")
             }
         }
         .padding()
+        .fullScreenCover(isPresented: $startGame) {
+            if playFirst {
+                GameView(game: Game(currentPlayer: Player.player))
+                
+            } else {
+                GameView(game: Game(currentPlayer: Player.agent))
+            }
+        }
     }
 }
 

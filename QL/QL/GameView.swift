@@ -14,6 +14,7 @@ struct GameView: View {
         ZStack {
             Color.black.ignoresSafeArea()
             BoardView(game: game)
+                .padding()
             VStack {
                 Spacer()
                 HStack {
@@ -37,18 +38,6 @@ struct GameView: View {
 
 struct GameView_Previews: PreviewProvider {
     static var previews: some View {
-        GameView()
+        GameView(game: Game(currentPlayer: Player.player))
     }
 }
-
-
-//
-//a1: $game.a1,
-//          a2: $game.a2,
-//          a3: $game.a3,
-//          b1: $game.b1,
-//          b2: $game.b2,
-//          b3: $game.b3,
-//          c1: $game.c1,
-//          c2: $game.c2,
-//          c3: $game.c3

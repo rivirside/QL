@@ -31,8 +31,43 @@ class Game: ObservableObject {
     @Published var c3: Tile = .empty
     
     @Published var currentPlayer: Player
+    @Published var currentMove: Int = 0
     
     init(currentPlayer: Player) {
         self.currentPlayer = currentPlayer
+    }
+    
+    
+    func playTile(tile: inout Tile) {
+        if currentPlayer == Player.player {
+            tile = Tile.player
+        } else {
+            tile = Tile.agent
+        }
+        
+        if currentPlayer == .player {
+            currentPlayer = .agent
+        } else if currentPlayer == .agent {
+            currentPlayer = .player
+        }
+    }
+    
+    func getTiles() -> [Tile] {
+        var tiles = [Tile]()
+        tiles.append(a1)
+        tiles.append(a2)
+        tiles.append(a3)
+        tiles.append(b1)
+        tiles.append(b2)
+        tiles.append(b3)
+        tiles.append(c1)
+        tiles.append(c2)
+        tiles.append(c3)
+        return tiles
+    }
+    
+    func checkWin() {
+        let tiles = getTiles()
+        if 
     }
 }

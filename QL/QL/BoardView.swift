@@ -27,51 +27,59 @@ struct BoardView: View {
             Color.clear
             GridRow {
                 Button {
-                    
+                    game.playTile(tile: &game.a1)
                 } label: {
                     TileView(tile: $game.a1)
                 }
                 Button {
-                    
+                    game.playTile(tile: &game.a2)
+
                 } label: {
                     TileView(tile: $game.a2)
                 }
                 Button {
-                    
+                    game.playTile(tile: &game.a3)
+
                 } label: {
                     TileView(tile: $game.a3)
                 }
             }
             GridRow {
                 Button {
-                    
+                    game.playTile(tile: &game.b1)
+
                 } label: {
                     TileView(tile: $game.b1)
                 }
                 Button {
-                    
+                    game.playTile(tile: &game.b2)
+
                 } label: {
                     TileView(tile: $game.b2)
                 }
                 Button {
-                    
+                    game.playTile(tile: &game.b3)
+
                 } label: {
                     TileView(tile: $game.b3)
                 }
             }
             GridRow {
                 Button {
-                    
+                    game.playTile(tile: &game.c1)
+
                 } label: {
                     TileView(tile: $game.c1)
                 }
                 Button {
-                    
+                    game.playTile(tile: &game.c2)
+
                 } label: {
                     TileView(tile: $game.c2)
                 }
                 Button {
-                    
+                    game.playTile(tile: &game.c3)
+
                 } label: {
                     TileView(tile: $game.c3)
                 }
