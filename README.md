@@ -1,4 +1,5 @@
-# QL
+# QL - Wow that's Ql!
+###### (I know, I'm awful)
 
 Minimal tic-tac-toe project implementing a Q learning approach to reinforcemnet learning for training an agent.
 
