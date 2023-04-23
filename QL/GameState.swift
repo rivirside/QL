@@ -68,6 +68,5 @@ class Game: ObservableObject {
     
     func checkWin() {
         let tiles = getTiles()
-        if 
     }
 }
